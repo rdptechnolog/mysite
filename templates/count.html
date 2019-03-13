@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to RDS</title>
+</head>
+<body>
+
+<a href="{% url 'home' %}">Back to homepage</a>
+<center>
+
+<h1>Number of words</h1>
+
+    <hr>
+    <h2>your words</h2>
+
+{{ txtarea }}
+<br>
+    <h2>No of words</h2>
+    <h3>Total words are {{ word }}</h3>
+    <br>
+    <br>
+
+{% for word , value in worddictionary %}
+    {{word}} = {{value}}
+ <br>
+    {% endfor %}
+</center>
+</body>
+</html>
